@@ -1,0 +1,53 @@
+[book]
+authors = ["Squall", "shenjack"]
+language = "zh-CN"
+multilingual = false
+src = "src"
+title = "名竞教程"
+
+[build]
+create-missing = true
+
+# 默认 404 文件
+[output.html]
+mathjax-support = true
+# input-404 = "404.md"
+additional-css = ["./theme/pagetoc.css"]
+additional-js  = ["./theme/pagetoc.js"]
+
+
+# 目录折叠
+[output.html.fold]
+enable = true
+level = 0
+
+# 最大搜索数量
+[output.html.search]
+limit-results = 15
+
+# 允许打印
+[output.html.print]
+enable = true    # include support for printable output
+page-break = true # insert page-break after each chapter
+
+### 扩展部分
+
+# 检查文档内链接
+[output.linkcheck]
+follow-web-links = false
+warning-policy = "ignore"
+traverse-parent-directories = true
+
+# 在新页面中打开链接
+[preprocessor.external-links]
+
+# 支持数学公式
+[preprocessor.katex]
+# block-delimiter = { left = "\\[", right = "\\]" }
+inline-delimiter = { left = "$", right = "$" }
+
+# 添加右侧目录
+# [preprocessor.theme]
+# pagetoc        = true
+# pagetoc-width            = "13%"
+# sidebar-width            = "300px"
